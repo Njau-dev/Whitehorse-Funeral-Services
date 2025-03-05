@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <meta name="description"
+        content="Whitehorse Funeral Services. Caskets, Flowers, Transport and Videography services for funerals around Kenya and Beyond.">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/whitehorse-logo.png">
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <title>Whitehorse Funeral Services</title>
+
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="./assets/images/whitehorse-logo.png" alt="logo-img" class="logo-img"></a>
+        </div>
+
+        <ul class="nav">
+            <li><a href="index.html" class="">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html" class="active">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <button class="request-btn">Plan Funeral</button>
+
+        <button class="dropdown-toggle"><img src="./assets/icons/icon-hamburger.svg" alt="icon-hamburger"></button>
+    </header>
+
+    <!-- Popup Form Container -->
+    <div class="popup-form-container">
+
+        <div class="popup-form">
+
+            <span class="close-btn">&times;</span>
+            <h2>Request Invite</h2>
+
+            <form id="invite-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <button type="submit" class="request-btn">Submit</button>
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- HERO SECTION -->
+
+    <!-- Banner -->
+    <section class="our-services" data-aos="slide-left">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="service-item">
+                <img src="assets/images/DSC_4314-1-1024x693.jpg" alt="Hearse Services">
+                <button class="service-title">Hearse Services</button>
+                <div class="service-details">
+                    <p>We provide dignified hearse transportation services, ensuring a respectful final journey for your loved one.</p>
+                </div>
+            </div>
+    
+            <div class="service-item">
+                <img src="assets/images/download.jpeg" alt="Executive Caskets">
+                <button class="service-title">Executive Caskets</button>
+                <div class="service-details">
+                    <p>Our premium caskets come in a variety of styles and materials, offering elegance and comfort for a final resting place.</p>
+                </div>
+            </div>
+    
+            <div class="service-item">
+                <img src="assets/images/images.jpeg" alt="Flowers">
+                <button class="service-title">Flowers</button>
+                <div class="service-details">
+                    <p>Beautiful floral arrangements to honor and celebrate the life of your loved one.</p>
+                </div>
+            </div>
+    
+            <div class="service-item">
+                <img src="assets/images/download (1).jpeg" alt="Clothing">
+                <button class="service-title">Clothing</button>
+                <div class="service-details">
+                    <p>Elegant and traditional funeral attire to provide a dignified farewell.</p>
+                </div>
+            </div>
+    
+            <div class="service-item">
+                <img src="assets/images/download (2).jpeg" alt="Tents">
+                <button class="service-title">Tents</button>
+                <div class="service-details">
+                    <p>Quality tents and seating arrangements for funeral and memorial services.</p>
+                </div>
+            </div>
+    
+            <div class="service-item">
+                <img src="assets/images/download (3).jpeg" alt="Media Coverage">
+                <button class="service-title">Media Coverage</button>
+                <div class="service-details">
+                    <p>Professional photography and videography services to capture and preserve the memories of your loved one’s final journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ ACCORDION -->
+
+    <!-- <section class="faq-section" data-aos="slide-left">
+
+        <div class="contact-container">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How do I sign up for an Easybank account?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+
+                <div class="faq-answer">
+                    <p>
+                        Signing up for an Easybank account is simple. Just click on the "Request Invite" button on the
+                        homepage, fill out the form, and we’ll get you started in no time.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What should I do if I lose my Easybank card?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        If you lose your Easybank card, contact our support team immediately at +1 (555) 123-4567, and
+                        we’ll block the card and issue a new one for you.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How can I check my account balance?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        You can check your account balance anytime using our mobile app or by logging into your account
+                        on the Easybank website.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section> -->
+
+
+
+    <!-- Footer -->
+
+    <footer>
+        <div class="container">
+
+            <div class="ft-one">
+
+                <div class="social-link">
+
+                    <img src="./assets/images/whitehorse-logo.png" alt="logo-img" class="logo-img">
+
+                    <ul class="social-link-list">
+                        <li><a href="#facebook"><img class="socials-icons" src="./assets/icons/icon-facebook.svg"
+                                    alt="icon-facebook"></a>
+                        </li>
+                        <li><a href="#youtube"><img class="socials-icons" src="./assets/icons/icon-youtube.svg"
+                                    alt="icon-youtube"></a>
+                        </li>
+                        <li><a href="#twitter"><img class="socials-icons" src="./assets/icons/icon-twitter.svg"
+                                    alt="icon-twitter"></a>
+                        </li>
+                        <li><a href="#instagram"><img class="socials-icons" src="./assets/icons/icon-instagram.svg"
+                                    alt="icon-instagram"></a></li>
+                    </ul>
+                </div>
+
+                <ul class="ft-nav-1">
+                    <li> <a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+                <ul class="ft-nav-2">
+                    <li><a href="#support">Support</a></li>
+                    <li><a href="#privacy-policy">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="ft-two">
+                <button class="request-btn">Plan a Funeral</button>
+                <h5>© Easybank. All Rights Reserved</h5>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- scripts -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
