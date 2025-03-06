@@ -32,7 +32,7 @@ body {
     overflow-x: hidden;
     width: 100vw;
     font-size: 16px;
-    background-color: var(--white);
+    background-color: var(--darkBrown);
 }
 
 body.noscroll {
@@ -96,7 +96,10 @@ p {
 }
 
 .request-btn:hover {
-    scale: 1.07;
+    /* scale: 1.07; */
+    background: var(--white);
+    color: var(--textDark);
+    border: 1px solid var(--darkgold);
 }
 
 /* Secondary button */
@@ -189,7 +192,7 @@ p {
 
 /* nav section */
 header {
-    background: rgba(60, 54, 49, 0.425);
+    background: rgba(60, 54, 49, 0.5);
     backdrop-filter: blur(10px);
     padding: 0px 50px;
     display: flex;
@@ -197,7 +200,7 @@ header {
     align-items: center;
     position: sticky;
     top: 0;
-    z-index: 2;
+    z-index: 4;
     width: 100vw;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -220,7 +223,7 @@ header .logo .logo-img {
 .nav li a {
     position: relative;
     margin-left: 20px;
-    color: var(--darkBlue);
+    color: var(--white);
 }
 
 .nav li a::after {
@@ -265,25 +268,29 @@ header .logo .logo-img {
     position: relative;
     background-color: var(--darkBrown);
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
-    height: 100vh;
-    padding-top: 6rem;
-    overflow: visible;
-    top: -100px;
-    z-index: 1;
+    justify-content: space-between;
+    height: 90vh;
+    overflow-x: visible;
+    z-index: 2;
     color: var(--grayishBlue);
+}
+
+.hero-container {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    overflow-y: visible;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
 }
 
 /* Center banner details content */
 .banner-details {
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
     text-align: center;
-    /* max-width: 32rem; */
-    /* transform: translateY(-20%);
-    position: relative; */
+    max-width: 32rem;
 }
 
 .banner-details h1 {
@@ -299,38 +306,59 @@ header .logo .logo-img {
     font-size: 1.2rem;
 }
 
+.banner-details button {
+    margin: 0.5rem;
+}
+
 /* Mockup image animation */
 .mockup {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
-    z-index: 1;
-    animation: fadeIn 2s ease-in-out;
-    max-width: max-content;
+    transform: translateX(15%);
 }
 
 .mockup-img {
-    width: 55%;
+    width: 130%;
+    height: 100%;
     object-fit: cover;
-    overflow: visible;
-    z-index: 2;
-    border-radius: 3rem;
-
+    z-index: 0;
+    transition: transform 0.3s ease;
+    transform: scaleX(-1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Keyframes for fade-in animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateX(100px);
-    }
 
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+/* ABOUT SECTION */
+.about {
+    background-color: var(--lightGrayishBlue);
+    padding: 2rem 0;
+    margin-top: 0;
+    position: relative;
+    z-index: 1;
 }
+
+.about-container {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+
+
+/* Other content containers */
+.services {
+    padding: 2rem 0;
+    background-color: var(--white);
+}
+
+.services-container {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+
 
 /* FOOTER SECTION */
 
@@ -429,7 +457,7 @@ footer .container {
     header {
         padding: 0.2rem 1rem;
         justify-content: space-between;
-        position: fixed;
+        position: sticky;
     }
 
 
@@ -516,21 +544,19 @@ footer .container {
         flex-direction: column;
     }
 
+
+
     /* BANNER section */
 
     .banner {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         flex-direction: column;
-        background: var(--darkBrown);
-        top: 0;
+        height: fit-content;
     }
 
     .banner-details {
         width: 100%;
         transform: translate(0);
-        padding: 0 40px;
+        padding: 0 1rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -550,16 +576,24 @@ footer .container {
         font-size: 20px;
     }
 
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 5rem;
+    }
+
     .mockup {
-        background-size: 100%;
-        background-repeat: no-repeat;
-        background-position-x: 120px;
-        background-position-y: 30px;
+        position: relative;
+        max-width: 90%;
+        width: 100%;
+        height: 400px;
+        margin-top: 2rem;
+        transform: translateX(0);
     }
 
     .mockup-img {
         width: 100%;
-        transform: translate(0, -90px);
         filter: invert(10%);
+        height: 110%;
     }
 }
