@@ -77,6 +77,8 @@ inviteForm.addEventListener('submit', (e) => {
 });
 
 
+ 
+
 
 
 // Initialize AOS
