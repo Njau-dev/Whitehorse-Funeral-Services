@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Whitehorse Funeral Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        :root {
+            /* Hero color */
+            --darkBrown: #3C3631;
+
+            /* Gradient and accent colors */
+            --lightGold: #fada00;
+            --darkGold: #ca8400;
+
+            /* Text color */
+            --textDark: hsl(233, 26%, 24%);
+            --textPDark: hsl(0, 0%, 25%);
+
+            /* Light text colors */
+            --lightGrayishBlue: hsl(220, 14%, 96%);
+
+            /* Background colors */
+            --grayishBlue: hsl(233, 8%, 62%);
+            --white: hsl(0, 0%, 100%);
+        }
+
+        body {
+            background: var(--white);
+            color: var(--textPDark);
+            font-family: Arial, sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth; /* Smooth scrolling */
+        }
+
+        .about-container {
+            max-width: 1200px; /* Max width for larger screens */
+            width: 100%;
+            margin: 0 auto; /* Center the container */
+            padding: 50px 20px; /* Added horizontal padding */
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: bold;
+            color: var(--lightGold);
+            text-align: left; /* Align to the left */
+            margin: 0 0 40px 0; /* Adjusted margin */
+            padding-left: 20px; /* Add some padding */
+            border-left: 8px solid var(--lightGold); /* Add a gold border */
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between; /* Space between text and image */
+            align-items: center;
+            gap: 40px; /* Gap between text and image */
+            flex-wrap: wrap;
+            margin-bottom: 80px;
+            position: relative;
+            overflow: hidden;
+            padding: 20px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--white), var(--lightGrayishBlue));
+            animation: backgroundAnimation 10s infinite alternate;
+        }
+
+        @keyframes backgroundAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .content-text {
+            flex: 1; /* Take up remaining space */
+            max-width: 50%; /* Limit width to 50% */
+            background: var(--white);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeIn 1s ease-out forwards;
+            margin-left: 0; /* Ensure no gap on the left */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover effect */
+        }
+
+        .content-text:hover {
+            transform: translateY(-5px); /* Lift on hover */
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .content img {
+            max-width: 30%; /* Ensure images fit perfectly */
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover effect */
+            cursor: pointer; /* Indicate clickable */
+        }
+
+        .content img:hover {
+            transform: scale(1.05); /* Enlarge on hover */
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+        }
+
+        .content img:active {
+            transform: scale(1.1); /* Enlarge more on click */
+        }
+
+        .section-card {
+            margin-bottom: 80px;
+        }
+
+        .values-grid, .team-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px; /* Increased spacing between cards */
+            justify-content: center;
+            padding: 30px;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .value-card, .team-card {
+            background: var(--white);
+            padding: 20px; /* Increased padding */
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px; /* Limit card width */
+            text-align: center;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            background: linear-gradient(to right, var(--lightGold), var(--darkGold));
+            color: var(--white);
+        }
+
+        .team-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 1024px) {
+            .about-container {
+                max-width: 90%; /* Adjusted for smaller screens */
+            }
+            .content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .content-text {
+                max-width: 100%; /* Full width on smaller screens */
+                margin-left: 0; /* Reset margin for smaller screens */
+            }
+            .content img {
+                max-width: 80%; /* Adjust image size for smaller screens */
+                margin: 20px auto;
+            }
+            h1 {
+                font-size: 36px;
+            }
+            .values-grid, .team-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            .value-card, .team-card {
+                width: 90%;
+                max-width: 350px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .content-text {
+                max-width: 100%;
+                margin-left: 0;
+                padding: 0 20px;
+            }
+            .content img {
+                max-width: 80%;
+                margin: 20px auto;
+            }
+            h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="about-container">
+        <h1>About Us</h1> 
+        <div class="content">
+            <div class="content-text">
+                <p>When grief touches your life, the weight of decisions and arrangements can feel overwhelming. At <strong style="color: var(--lightGold);">The Whitehorse Funeral Services</strong>, we lift that burden with compassionate care and unwavering support.</p>
+                <p>Our dedicated team provides personalized funeral services that honor the wishes of the deceased and bring comfort to those left behind.</p>
+            </div>
+            <img src="assets/images/DSC_1042(1).jpg" alt="Compassionate Service Image">
+        </div>
+        
+        <div class="content">
+            <div class="content-text">
+                <h2>Our Mission</h2> <!-- Added Mission Heading -->
+                <p>At Whitehorse Funeral Services, our mission is to provide compassionate, dignified, and personalized funeral services that honor the lives of loved ones and support grieving families through difficult times.</p>
+                <p>We are committed to upholding the highest standards of professionalism, integrity, and respect, ensuring that every family we serve feels supported and cared for during their time of need.</p>
+            </div>
+            <img src="assets/images/DSC_1042(3).jpg" alt="Compassionate Service Image">
+        </div>
+
+        <div class="section-card">
+            <h2>Our Core Values</h2>
+            <div class="values-grid">
+                <div class="value-card" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-out"><h3>💛 Compassion</h3><p>We treat every family with kindness, understanding, and care.</p></div>
+                <div class="value-card" data-aos="fade-up"><h3>🕊️ Respect</h3><p>We honor all beliefs, traditions, and final wishes with dignity.</p></div>
+                <div class="value-card" data-aos="fade-up"><h3>⚖️ Integrity</h3><p>We are transparent, honest, and uphold the highest ethical standards.</p></div>
+                <div class="value-card" data-aos="fade-up"><h3>📜 Professionalism</h3><p>Our trained staff provides seamless, respectful, and expert service.</p></div>
+                <div class="value-card" data-aos="fade-up"><h3>🎗️ Personalization</h3><p>Each service is tailored to celebrate the unique life of the departed.</p></div>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2>Meet Our Team</h2>
+            <div class="team-grid">
+                <div class="team-card" data-aos="fade-up">
+                    <img src="assets/images/DSC_1049.jpg" alt="John Doe">
+                    <h3>John Doe</h3>
+                    <p>Founder & Director</p>
+                </div>
+                <div class="team-card" data-aos="fade-up">
+                    <img src="assets/images/DSC_1050.jpg" alt="Jane Smith">
+                    <h3>Jane Smith</h3>
+                    <p>Funeral Coordinator</p>
+                </div>
+                <div class="team-card" data-aos="fade-up">
+                    <img src="assets/images/DSC_1050.jpg" alt="Michael Brown">
+                    <h3>Michael Brown</h3>
+                    <p>Grief Counselor</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

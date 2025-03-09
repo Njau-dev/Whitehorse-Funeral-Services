@@ -77,6 +77,8 @@ inviteForm.addEventListener('submit', (e) => {
 });
 
 
+ 
+
 
 // TESTIMONIALS SLIDER
 document.addEventListener('DOMContentLoaded', function () {
