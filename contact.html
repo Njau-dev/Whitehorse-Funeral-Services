@@ -34,45 +34,203 @@
             <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
 
-        <button class="request-btn">Plan Funeral</button>
+        <button class="request-btn" onclick="window.location.href='/services.html#pre-planning-form'">Plan
+            Funeral</button>
 
         <button class="dropdown-toggle"><img src="./assets/icons/icon-hamburger.svg" alt="icon-hamburger"></button>
     </header>
 
-    <!-- Popup Form Container -->
-    <div class="popup-form-container">
-
-        <div class="popup-form">
-
-            <span class="close-btn">&times;</span>
-            <h2>Request Invite</h2>
-
-            <form id="invite-form">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="phone">Phone:</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
-
-                <button type="submit" class="request-btn">Submit</button>
-            </form>
-
-        </div>
-
-    </div>
-
     <!-- PAGE  -->
     <section class="page-header">
         <h1>Contact.</h1>
+    </section>
+
+
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-subtitle">We're here to provide support and guidance during your time of need</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                        </svg>
+                    </div>
+                    <h3 class="contact-title">Email Us</h3>
+                    <p class="contact-info">For inquiries and support</p>
+                    <a href="mailto:info@whitehorsefunerals.com" class="contact-link">info@whitehorsefunerals.com</a>
+                    <p class="contact-info">For urgent matters</p>
+                    <a href="mailto:urgent@whitehorsefunerals.com"
+                        class="contact-link">urgent@whitehorsefunerals.com</a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM19 12h2c0-4.97-4.03-9-9-9v2c3.87 0 7 3.13 7 7zm-4 0h2c0-2.76-2.24-5-5-5v2c1.66 0 3 1.34 3 3z" />
+                        </svg>
+                    </div>
+                    <h3 class="contact-title">Call Us</h3>
+                    <p class="contact-info">24/7 Support Line</p>
+                    <a href="tel:+254712345678" class="contact-link">+254 712 345 678</a>
+                    <p class="contact-info">Office Phone</p>
+                    <a href="tel:+254020123456" class="contact-link">+254 020 123 456</a>
+
+                    <div class="business-hours">
+                        <h4 class="hours-title">Business Hours</h4>
+                        <ul class="hours-list">
+                            <li><span>Monday - Friday:</span> <span>8:00 AM - 6:00 PM</span></li>
+                            <li><span>Saturday:</span> <span>9:00 AM - 4:00 PM</span></li>
+                            <li><span>Sunday:</span> <span>By Appointment</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                        </svg>
+                    </div>
+                    <h3 class="contact-title">Visit Us</h3>
+                    <p class="contact-info">Whitehorse Funeral Services</p>
+                    <p class="contact-info">123 Moi Avenue, Central Business District</p>
+                    <p class="contact-info">Nairobi, Kenya</p>
+
+                    <div class="contact-social-links">
+                        <a href="https://facebook.com/whitehorsefunerals" class="contact-social-link" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C18.34 21.21 22 17.06 22 12.06C22 6.53 17.5 2.04 12 2.04Z" />
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com/whitehorsefunerals" class="contact-social-link" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path
+                                    d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z" />
+                            </svg>
+                        </a>
+                        <a href="https://instagram.com/whitehorsefunerals" class="contact-social-link" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/whitehorsefunerals" class="contact-social-link"
+                            target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path
+                                    d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.789657954623!2d36.78875711454161!3d-1.3010884808705532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f11aa9db6ca49%3A0x5998f256d5dbebf4!2sOLA%20Energy%20ngongroad!5e0!3m2!1sen!2ske!4v1741622692748!5m2!1sen!2ske"
+                    allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact form -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Have questions or need assistance? We're here to help you through this
+                    difficult time.</p>
+            </div>
+
+            <div class="contact-form-container">
+                <div class="form-header">
+                    <h3 class="contact-form-title">Send Us a Message</h3>
+                    <p class="form-subtitle">We'll respond promptly to your inquiry</p>
+                </div>
+
+                <form id="contactForm" class="contact-form" action="mailto:info@whitehorsefunerals.com" method="post"
+                    enctype="text/plain">
+                    <div id="formMessage" class="form-message"></div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name" class="form-label required-label">Full Name</label>
+                            <div class="input-icon">
+                                <input type="text" id="name" name="name" class="form-control"
+                                    placeholder="Your full name" required>
+                                <svg class="input-icon-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                                </svg>
+                                <div class="form-error">Please enter your name</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone" class="form-label required-label">Phone Number</label>
+                            <div class="input-icon">
+                                <input type="tel" id="phone" name="phone" class="form-control"
+                                    placeholder="Your phone number" required>
+                                <svg class="input-icon-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path
+                                        d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z" />
+                                </svg>
+                                <div class="form-error">Please enter a valid phone number</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label required-label">Email Address</label>
+                        <div class="input-icon">
+                            <input type="email" id="email" name="email" class="form-control"
+                                placeholder="Your email address" required>
+                            <svg class="input-icon-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path
+                                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                            </svg>
+                            <div class="form-error">Please enter a valid email address</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject" class="form-label required-label">Subject</label>
+                        <select id="subject" name="subject" class="form-control" required>
+                            <option value="" disabled selected>Select a subject</option>
+                            <option value="Funeral Services">Funeral Services</option>
+                            <option value="Pre-Planning">Pre-Planning</option>
+                            <option value="Pricing Information">Pricing Information</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <div class="form-error">Please select a subject</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="form-label required-label">Message</label>
+                        <textarea id="message" name="message" class="form-control" placeholder="Your message"
+                            required></textarea>
+                        <div class="form-error">Please enter your message</div>
+                    </div>
+
+                    <div class="button-container">
+                        <button type="submit" class="form-button">Send Message</button>
+                    </div>
+
+                    <div class="privacy-notice">
+                        By submitting this form, you agree to our <a href="#" class="privacy-link">Privacy Policy</a>
+                    </div>
+                </form>
+            </div>
+        </div>
     </section>
 
     <footer>
@@ -112,7 +270,8 @@
             </div>
 
             <div class="ft-two">
-                <button class="request-btn">Plan a Funeral</button>
+                <button class="request-btn" onclick="window.location.href='/services.html#pre-planning-form'">Plan a
+                    Funeral</button>
                 <h5>© Easybank. All Rights Reserved</h5>
             </div>
 

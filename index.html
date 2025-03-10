@@ -34,41 +34,11 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
 
-        <button class="request-btn">Plan Funeral</button>
+        <button class="request-btn" onclick="window.location.href='/services.html#pre-planning-form'">Plan
+            Funeral</button>
 
         <button class="dropdown-toggle"><img src="./assets/icons/icon-hamburger.svg" alt="icon-hamburger"></button>
     </header>
-
-    <!-- Popup Form Container -->
-    <div class="popup-form-container">
-
-        <div class="popup-form">
-
-            <span class="close-btn">&times;</span>
-            <h2>Request Invite</h2>
-
-            <form id="invite-form">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="phone">Phone:</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
-
-                <button type="submit" class="request-btn">Submit</button>
-            </form>
-
-        </div>
-
-    </div>
 
     <!-- HERO SECTION -->
 
@@ -80,8 +50,10 @@
                 <h1>Providing Compassionate Funeral Services in Nairobi and Beyond</h1>
                 <p>Take your financial life online. Your Easybank account will be a one-stop-shop
                     for spending, saving, budgeting, investing, and much more.</p>
-                <button class="request-btn">Plan Funeral</button>
-                <button class="subscribe-btn">Contact Us</button>
+                <button class="request-btn" onclick="window.location.href='/services.html#pre-planning-form'">Plan
+                    Funeral</button>
+                <button class="subscribe-btn" onclick="window.location.href='/contact.html#contactForm'">Contact
+                    Us</button>
             </div>
 
             <div class="mockup">
@@ -125,7 +97,8 @@
                         heal, and celebrate the life of your loved one.
                     </p>
 
-                    <button class="request-btn">Contact Us</button>
+                    <button class="request-btn" onclick="window.location.href='/services.html#contactForm'">Contact
+                        Us</button>
 
                 </div>
             </div>
@@ -312,57 +285,387 @@
         </div>
     </section>
 
-    <!-- FAQ ACCORDION -->
-    <!-- <section class="faq-section" data-aos="slide-left">
 
-        <div class="contact-container">
-            <h2>Frequently Asked Questions</h2>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>How do I sign up for an Easybank account?</h3>
-                    <span class="toggle-icon">+</span>
-                </div>
-
-                <div class="faq-answer">
-                    <p>
-                        Signing up for an Easybank account is simple. Just click on the "Request Invite" button on the
-                        homepage, fill out the form, and we’ll get you started in no time.
-                    </p>
-                </div>
-
+    <section class="pre-planning-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Funeral Pre-Planning</h2>
+                <p class="section-subtitle">Planning ahead provides peace of mind for you and your loved ones. Our
+                    pre-planning services allow you to make thoughtful decisions without the pressures of grief.</p>
             </div>
 
+            <div class="pre-planning-content">
+                <div class="info-column">
+                    <div class="info-box">
+                        <h3>Why Pre-Plan?</h3>
+                        <p>Pre-planning your funeral arrangements is a thoughtful and responsible decision that offers
+                            numerous benefits for you and your family:</p>
+                        <ul class="benefits-list">
+                            <li>Ease the burden on your loved ones during a difficult time</li>
+                            <li>Ensure your wishes are known and honored</li>
+                            <li>Lock in today's prices and protect against inflation</li>
+                            <li>Create a personalized service that reflects your life</li>
+                            <li>Provide peace of mind for yourself and your family</li>
+                            <li>Allow for thoughtful decisions without emotional stress</li>
+                        </ul>
+                    </div>
 
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>What should I do if I lose my Easybank card?</h3>
-                    <span class="toggle-icon">+</span>
+                    <div class="info-box">
+                        <h3>Our Pre-Planning Process</h3>
+                        <p>Our compassionate staff will guide you through each step of the pre-planning process:</p>
+                        <ol>
+                            <li><strong>Initial Consultation</strong> - Meet with our pre-planning specialist to discuss
+                                your wishes and options</li>
+                            <li><strong>Documentation</strong> - Record your preferences, personal information, and
+                                instructions</li>
+                            <li><strong>Funding Options</strong> - Explore payment plans and funding arrangements if
+                                desired</li>
+                            <li><strong>Finalization</strong> - Receive copies of your arrangements and share with loved
+                                ones</li>
+                            <li><strong>Updates</strong> - Make changes to your plan whenever needed</li>
+                        </ol>
+                        <p>We're here to answer your questions and provide guidance at every step.</p>
+                        <a href="service.html#pre-planning-form" class="cta-button">Start Pre-Planning Now</a>
+                    </div>
                 </div>
-                <div class="faq-answer">
-                    <p>
-                        If you lose your Easybank card, contact our support team immediately at +1 (555) 123-4567, and
-                        we’ll block the card and issue a new one for you.
-                    </p>
+
+                <div class="form-column">
+                    <div class="pre-planning-form" id="pre-planning-form">
+                        <h3 class="form-title">Funeral Pre-Planning Form</h3>
+
+                        <form id="funeralPrePlanningForm">
+                            <!-- Personal Information Section -->
+                            <div class="form-section">
+                                <h4 class="form-section-title">Personal Information</h4>
+
+                                <div class="form-row">
+                                    <div class="form-col">
+                                        <div class="form-group">
+                                            <label for="firstName" class="form-label">First Name*</label>
+                                            <input type="text" id="firstName" name="firstName" class="form-input"
+                                                required>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-col">
+                                        <div class="form-group">
+                                            <label for="lastName" class="form-label">Last Name*</label>
+                                            <input type="text" id="lastName" name="lastName" class="form-input"
+                                                required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-col">
+                                        <div class="form-group">
+                                            <label for="email" class="form-label">Email Address*</label>
+                                            <input type="email" id="email" name="email" class="form-input" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-col">
+                                        <div class="form-group">
+                                            <label for="phone" class="form-label">Phone Number*</label>
+                                            <input type="tel" id="phone" name="phone" class="form-input" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-col">
+                                        <div class="form-group">
+                                            <label for="city" class="form-label">City</label>
+                                            <input type="text" id="city" name="city" class="form-input">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- Service Preferences Section -->
+                            <div class="form-section">
+                                <h4 class="form-section-title">Service Preferences</h4>
+
+                                <div class="form-group">
+                                    <label class="form-label">Type of Service Preferred*</label>
+                                    <div class="radio-group">
+                                        <label class="radio-option">
+                                            <input type="radio" name="serviceType" value="memorial" class="radio-input">
+                                            Memorial Service
+                                        </label>
+                                        <label class="radio-option">
+                                            <input type="radio" name="serviceType" value="celebration"
+                                                class="radio-input">
+                                            Celebration of Life
+                                        </label>
+                                        <label class="radio-option">
+                                            <input type="radio" name="serviceType" value="direct" class="radio-input">
+                                            Direct Burial
+                                        </label>
+                                        <label class="radio-option">
+                                            <input type="radio" name="serviceType" value="other" class="radio-input">
+                                            Other
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="serviceLocation" class="form-label">Preferred Service Location</label>
+                                    <select id="serviceLocation" name="serviceLocation" class="form-select">
+                                        <option value="">Select an option</option>
+                                        <option value="place_of_worship">Place of Worship</option>
+                                        <option value="cemetery">Cemetery</option>
+                                        <option value="outdoor">Outdoor Venue</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="locationDetails" class="form-label">Location Details (if known)</label>
+                                    <input type="text" id="locationDetails" name="locationDetails" class="form-input"
+                                        placeholder="Name of venue or specific location">
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Final Disposition*</label>
+                                    <div class="radio-group">
+                                        <label class="radio-option">
+                                            <input type="radio" name="disposition" value="burial" class="radio-input"
+                                                required checked>
+                                            Burial
+                                        </label>
+                                        <label class="radio-option">
+                                            <input type="radio" name="disposition" value="cremation"
+                                                class="radio-input">
+                                            Cremation
+                                        </label>
+                                        <label class="radio-option">
+                                            <input type="radio" name="disposition" value="entombment"
+                                                class="radio-input">
+                                            Entombment
+                                        </label>
+                                        <label class="radio-option">
+                                            <input type="radio" name="disposition" value="donation" class="radio-input">
+                                            Donation to Science
+                                        </label>
+                                        <label class="radio-option">
+                                            <input type="radio" name="disposition" value="other" class="radio-input">
+                                            Other/Undecided
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Additional Service Elements -->
+                            <div class="form-section">
+                                <h4 class="form-section-title">Additional Service Elements</h4>
+
+                                <div class="form-group">
+                                    <label class="form-label">Which service elements would you like to include?</label>
+                                    <div class="checkbox-group">
+                                        <label class="checkbox-option">
+                                            <input type="checkbox" name="serviceElements" value="flowers"
+                                                class="checkbox-input">
+                                            Flowers
+                                        </label>
+                                        <label class="checkbox-option">
+                                            <input type="checkbox" name="serviceElements" value="coffins"
+                                                class="checkbox-input">
+                                            Executive Coffins
+                                        </label>
+                                        <label class="checkbox-option">
+                                            <input type="checkbox" name="serviceElements" value="photography"
+                                                class="checkbox-input">
+                                            Photography/Video Tribute
+                                        </label>
+                                        <label class="checkbox-option">
+                                            <input type="checkbox" name="serviceElements" value="clothing"
+                                                class="checkbox-input">
+                                            Clothing
+                                        </label>
+                                        <label class="checkbox-option">
+                                            <input type="checkbox" name="serviceElements" value="transport"
+                                                class="checkbox-input">
+                                            Hearse/Transportation Services
+                                        </label>
+                                        <label class="checkbox-option">
+                                            <input type="checkbox" name="serviceElements" value="tents"
+                                                class="checkbox-input">
+                                            Tents
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="specificRequests" class="form-label">Specific Requests or Cultural
+                                        Considerations</label>
+                                    <textarea id="specificRequests" name="specificRequests" class="form-textarea"
+                                        placeholder="Please share any special requests, religious or cultural considerations, or personal touches you'd like included"></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Contact Preferences -->
+                            <div class="form-section">
+                                <h4 class="form-section-title">Contact Preferences</h4>
+
+                                <div class="form-group">
+                                    <label class="form-label">How would you like us to contact you?*</label>
+                                    <div class="radio-group">
+                                        <label class="radio-option">
+                                            <input type="radio" name="contactPreference" value="email"
+                                                class="radio-input" required checked>
+                                            Email
+                                        </label>
+                                        <label class="radio-option">
+                                            <input type="radio" name="contactPreference" value="phone"
+                                                class="radio-input">
+                                            Phone
+                                        </label>
+                                        <label class="radio-option">
+                                            <input type="radio" name="contactPreference" value="both"
+                                                class="radio-input">
+                                            Both Email and Phone
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="additionalComments" class="form-label">Additional Comments or
+                                        Questions</label>
+                                    <textarea id="additionalComments" name="additionalComments" class="form-textarea"
+                                        placeholder="Any additional information you'd like to share with us"></textarea>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="form-submit">Submit Pre-Planning Form</button>
+
+                            <p class="form-note">* Required fields. Your information will be kept confidential and
+                                secure.</p>
+
+                            <div id="formResult" class="form-result"></div>
+                        </form>
+                    </div>
                 </div>
             </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>How can I check my account balance?</h3>
-                    <span class="toggle-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>
-                        You can check your account balance anytime using our mobile app or by logging into your account
-                        on the Easybank website.
-                    </p>
-                </div>
-            </div>
-
         </div>
-    </section> -->
+    </section>
 
+
+    <!-- FAQ ACCORDION -->
+    <section class="faq-section" data-aos="">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What should I do when a loved one passes away?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        When a loved one passes away, first contact Whitehorse Funeral Services at our 24-hour hotline.
+                        We'll guide you through the immediate steps, including transportation of the deceased, death
+                        certification, and beginning the funeral planning process. Our compassionate team is available
+                        to assist you through every stage during this difficult time.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How do I plan a funeral service with Whitehorse?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        Planning a funeral service with us begins with a consultation where we discuss your needs,
+                        preferences, and budget. We'll guide you through selecting services such as transportation,
+                        casket options, floral arrangements, and ceremony details. Our team will handle all logistics
+                        while you approve each element, ensuring the service honors your loved one appropriately.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How much does a funeral service cost?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        Funeral costs vary based on the services selected. We offer packages starting from basic
+                        services to comprehensive arrangements. During our initial consultation, we provide a
+                        transparent breakdown of all costs and work with your budget to create a dignified service. We
+                        also offer guidance on available payment options and assistance programs if needed.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Can you accommodate cultural and religious customs?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        Yes, we respectfully accommodate diverse cultural and religious customs. Our experienced staff
+                        has served families from various backgrounds and traditions. We work closely with religious
+                        leaders and community members to ensure all ceremonies honor your specific customs, from
+                        traditional Catholic services to Hindu cremation rituals and everything in between.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Do you offer pre-planning funeral services?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        Yes, we offer comprehensive pre-planning services that allow you to make arrangements in
+                        advance. This relieves your loved ones of difficult decisions during their time of grief and
+                        ensures your wishes are honored. Our pre-planning consultants can guide you through options,
+                        document your preferences, and provide information about pre-payment plans if desired.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What support do you offer families after the funeral?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        Our care extends beyond the funeral service. We provide grief support resources, including
+                        counseling referrals, support group information, and memorial planning assistance. We also help
+                        with practical matters such as obtaining death certificates, assisting with obituary
+                        publications, and coordinating with insurance companies regarding funeral benefits.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Can you help with transportation arrangements?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        Yes, we offer comprehensive transportation services. Our professional fleet includes hearses and
+                        family limousines for the funeral procession. We also handle the dignified transport of the
+                        deceased from the place of death to our funeral home. For international arrangements, we can
+                        coordinate with airlines and manage all necessary documentation for repatriation services.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <!-- Footer -->
@@ -404,7 +707,8 @@
             </div>
 
             <div class="ft-two">
-                <button class="request-btn">Plan a Funeral</button>
+                <button class="request-btn" onclick="window.location.href='/services.html#pre-planning-form'">Plan a
+                    Funeral</button>
                 <h5>© Easybank. All Rights Reserved</h5>
             </div>
 

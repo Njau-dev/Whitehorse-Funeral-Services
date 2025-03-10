@@ -34,41 +34,11 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
 
-        <button class="request-btn">Plan Funeral</button>
+        <button class="request-btn" onclick="window.location.href='/services.html#pre-planning-form'">Plan
+            Funeral</button>
 
         <button class="dropdown-toggle"><img src="./assets/icons/icon-hamburger.svg" alt="icon-hamburger"></button>
     </header>
-
-    <!-- Popup Form Container -->
-    <div class="popup-form-container">
-
-        <div class="popup-form">
-
-            <span class="close-btn">&times;</span>
-            <h2>Request Invite</h2>
-
-            <form id="invite-form">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="phone">Phone:</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
-
-                <button type="submit" class="request-btn">Submit</button>
-            </form>
-
-        </div>
-
-    </div>
 
     <!-- PAGE  -->
     <section class="page-header">
@@ -106,7 +76,8 @@
                         heal, and celebrate the life of your loved one.
                     </p>
 
-                    <button class="request-btn">Contact Us</button>
+                    <button class="request-btn" onclick="window.location.href='/services.html#contactForm'">Contact
+                        Us</button>
 
                 </div>
             </div>
@@ -142,6 +113,121 @@
 
                 <div class="mission-img">
                     <img src="assets/images/mission.jpg" alt="Compassionate Service Image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ ACCORDION -->
+    <section class="faq-section" data-aos="">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What should I do when a loved one passes away?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        When a loved one passes away, first contact Whitehorse Funeral Services at our 24-hour hotline.
+                        We'll guide you through the immediate steps, including transportation of the deceased, death
+                        certification, and beginning the funeral planning process. Our compassionate team is available
+                        to assist you through every stage during this difficult time.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How do I plan a funeral service with Whitehorse?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        Planning a funeral service with us begins with a consultation where we discuss your needs,
+                        preferences, and budget. We'll guide you through selecting services such as transportation,
+                        casket options, floral arrangements, and ceremony details. Our team will handle all logistics
+                        while you approve each element, ensuring the service honors your loved one appropriately.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How much does a funeral service cost?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        Funeral costs vary based on the services selected. We offer packages starting from basic
+                        services to comprehensive arrangements. During our initial consultation, we provide a
+                        transparent breakdown of all costs and work with your budget to create a dignified service. We
+                        also offer guidance on available payment options and assistance programs if needed.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Can you accommodate cultural and religious customs?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        Yes, we respectfully accommodate diverse cultural and religious customs. Our experienced staff
+                        has served families from various backgrounds and traditions. We work closely with religious
+                        leaders and community members to ensure all ceremonies honor your specific customs, from
+                        traditional Catholic services to Hindu cremation rituals and everything in between.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Do you offer pre-planning funeral services?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        Yes, we offer comprehensive pre-planning services that allow you to make arrangements in
+                        advance. This relieves your loved ones of difficult decisions during their time of grief and
+                        ensures your wishes are honored. Our pre-planning consultants can guide you through options,
+                        document your preferences, and provide information about pre-payment plans if desired.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What support do you offer families after the funeral?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        Our care extends beyond the funeral service. We provide grief support resources, including
+                        counseling referrals, support group information, and memorial planning assistance. We also help
+                        with practical matters such as obtaining death certificates, assisting with obituary
+                        publications, and coordinating with insurance companies regarding funeral benefits.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Can you help with transportation arrangements?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        Yes, we offer comprehensive transportation services. Our professional fleet includes hearses and
+                        family limousines for the funeral procession. We also handle the dignified transport of the
+                        deceased from the place of death to our funeral home. For international arrangements, we can
+                        coordinate with airlines and manage all necessary documentation for repatriation services.
+                    </p>
                 </div>
             </div>
         </div>
@@ -224,7 +310,8 @@
             </div>
 
             <div class="ft-two">
-                <button class="request-btn">Plan a Funeral</button>
+                <button class="request-btn" onclick="window.location.href='/services.html#pre-planning-form'">Plan a
+                    Funeral</button>
                 <h5>© Easybank. All Rights Reserved</h5>
             </div>
 

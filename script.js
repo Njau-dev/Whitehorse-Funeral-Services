@@ -13,71 +13,32 @@ toggleButton.addEventListener('click', () => {
 
 // FAQ section
 
-const faqQuestion = document.querySelectorAll('.faq-question');
+// JavaScript for FAQ accordion functionality
+document.addEventListener('DOMContentLoaded', function () {
+    const faqItems = document.querySelectorAll('.faq-item');
 
-faqQuestion.forEach(item => {
-    item.addEventListener('click', () => {
-        const parent = item.parentElement;
-        parent.classList.toggle('active');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.toggle-icon');
+
+        // Initially hide all answers
+        answer.style.display = 'none';
+
+        question.addEventListener('click', function () {
+            // Toggle answer visibility
+            if (answer.style.display === 'none') {
+                answer.style.display = 'block';
+                icon.textContent = '−'; // Minus sign
+                item.classList.add('active');
+            } else {
+                answer.style.display = 'none';
+                icon.textContent = '+'; // Plus sign
+                item.classList.remove('active');
+            }
+        });
     });
 });
-
-
-// POP-UP FORM JS
-
-// Get elements
-const popupFormContainer = document.querySelector('.popup-form-container');
-const requestInviteBtn = document.querySelectorAll('.request-btn');
-const closePopupBtn = document.querySelector('.close-btn');
-const popupForm = document.querySelector('.popup-form');
-
-
-// Show the popup form with a smooth transition
-
-//use for each to target each button click with a loop
-requestInviteBtn.forEach((button) => {
-    button.addEventListener('click', () => {
-        popupFormContainer.classList.add('show');
-        popupForm.classList.add('show');
-    })
-})
-
-// Close the popup
-closePopupBtn.addEventListener('click', () => {
-    popupFormContainer.classList.remove('show');
-    popupForm.classList.remove('show');
-});
-
-// Close the popup when clicked outside the form
-window.addEventListener('click', (event) => {
-    if (event.target === popupFormContainer) {
-        popupFormContainer.classList.remove('show');
-        popupForm.classList.remove('show');
-    }
-});
-
-// Form validation
-const inviteForm = document.getElementById('invite-form');
-inviteForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const phone = document.getElementById('phone').value;
-
-    // alert message plus close
-    if (name && email && phone) {
-        alert("Invite request submitted!");
-        popupFormContainer.classList.remove("show");
-        popupForm.classList.remove("show");
-        inviteForm.reset();
-    } else {
-        alert("Please fill in all the required fields.");
-    }
-});
-
-
- 
 
 
 // TESTIMONIALS SLIDER
@@ -190,6 +151,146 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+
+// PRE PLANNING FORM
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('funeralPrePlanningForm');
+    const formResult = document.getElementById('formResult');
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Get form data
+        const formData = new FormData(form);
+
+        // Use Formspree endpoint for form submission
+        const formspreeEndpoint = 'https://formspree.io/f/xyzeyejn';
+
+        fetch(formspreeEndpoint, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+            .then(response => {
+                if (response.ok) {
+                    formResult.textContent = "Thank you! Your pre-planning form has been submitted successfully. Our team will contact you shortly.";
+                    formResult.className = "form-result success-message";
+                    formResult.style.display = "block";
+                    form.reset();
+                } else {
+                    return response.json().then(err => {
+                        throw new Error(err.error || 'Form submission failed');
+                    });
+                }
+            })
+            .catch(error => {
+                formResult.textContent = "There was an error submitting your form. Please try again or contact us directly.";
+                formResult.className = "form-result error-message";
+                formResult.style.display = "block";
+                console.error('Form submission error:', error);
+            })
+            .finally(() => {
+                formResult.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+    });
+});
+
+
+// CONTACT FORM
+document.addEventListener('DOMContentLoaded', function () {
+    const contactForm = document.getElementById('contactForm');
+    const formMessage = document.getElementById('formMessage');
+
+    // Form validation
+    contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        let isValid = true;
+        const formControls = contactForm.querySelectorAll('.form-control[required]');
+
+        // Validation logic remains the same
+        formControls.forEach(function (control) {
+            control.classList.remove('error');
+
+            if (!control.value.trim()) {
+                control.classList.add('error');
+                isValid = false;
+            }
+
+            if (control.type === 'email' && control.value.trim()) {
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(control.value)) {
+                    control.classList.add('error');
+                    isValid = false;
+                }
+            }
+
+            if (control.id === 'phone' && control.value.trim()) {
+                const phonePattern = /^[\d\s\(\)\-\+]{7,20}$/;
+                if (!phonePattern.test(control.value)) {
+                    control.classList.add('error');
+                    isValid = false;
+                }
+            }
+        });
+
+        if (isValid) {
+            // Show loading state
+            formMessage.textContent = 'Sending message...';
+            formMessage.className = 'form-message pending';
+            formMessage.style.display = 'block';
+
+            // Use Formspree endpoint
+            const formspreeEndpoint = 'https://formspree.io/f/xyzeyejn';
+
+            const formData = new FormData(contactForm);
+
+            fetch(formspreeEndpoint, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+                .then(response => {
+                    if (response.ok) {
+                        formMessage.textContent = 'Thank you! Your message has been sent successfully.';
+                        formMessage.className = 'form-message success';
+                        contactForm.reset();
+                    } else {
+                        throw new Error('Server response was not OK');
+                    }
+                })
+                .catch(error => {
+                    console.error('Submission error:', error);
+                    formMessage.textContent = 'Oops! Something went wrong. Please try again later.';
+                    formMessage.className = 'form-message error';
+                })
+                .finally(() => {
+                    formMessage.style.display = 'block';
+                    formMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                });
+
+        } else {
+            formMessage.textContent = 'Please fill in all required fields correctly.';
+            formMessage.className = 'form-message error';
+            formMessage.style.display = 'block';
+            formMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    });
+
+    // Clear errors on input
+    contactForm.querySelectorAll('.form-control').forEach(function (control) {
+        control.addEventListener('input', function () {
+            this.classList.remove('error');
+            if (formMessage.style.display === 'block') {
+                formMessage.style.display = 'none';
+            }
+        });
+    });
+});
 
 // Initialize AOS
 AOS.init({
