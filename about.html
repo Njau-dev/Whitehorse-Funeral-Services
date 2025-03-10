@@ -1,278 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Whitehorse Funeral Services</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <style>
-        :root {
-            /* Hero color */
-            --darkBrown: #3C3631;
+    <!-- displays site properly based on user's device -->
+    <meta name="description"
+        content="Whitehorse Funeral Services. Caskets, Flowers, Transport and Videography services for funerals around Kenya and Beyond.">
 
-            /* Gradient and accent colors */
-            --lightGold: #fada00;
-            --darkGold: #ca8400;
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/whitehorse-logo.png">
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 
-            /* Text color */
-            --textDark: hsl(233, 26%, 24%);
-            --textPDark: hsl(0, 0%, 25%);
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="stylesheet" href="style.css">
 
-            /* Light text colors */
-            --lightGrayishBlue: hsl(220, 14%, 96%);
+    <title>Whitehorse Funeral Services</title>
 
-            /* Background colors */
-            --grayishBlue: hsl(233, 8%, 62%);
-            --white: hsl(0, 0%, 100%);
-        }
-
-        body {
-            background: var(--white);
-            color: var(--textPDark);
-            font-family: Arial, sans-serif;
-            line-height: 1.8;
-            margin: 0;
-            padding: 0;
-            scroll-behavior: smooth; /* Smooth scrolling */
-        }
-
-        .about-container {
-            max-width: 1200px; /* Max width for larger screens */
-            width: 100%;
-            margin: 0 auto; /* Center the container */
-            padding: 50px 20px; /* Added horizontal padding */
-        }
-
-        h1 {
-            font-size: 48px;
-            font-weight: bold;
-            color: var(--lightGold);
-            text-align: left; /* Align to the left */
-            margin: 0 0 40px 0; /* Adjusted margin */
-            padding-left: 20px; /* Add some padding */
-            border-left: 8px solid var(--lightGold); /* Add a gold border */
-        }
-
-        .content {
-            display: flex;
-            justify-content: space-between; /* Space between text and image */
-            align-items: center;
-            gap: 40px; /* Gap between text and image */
-            flex-wrap: wrap;
-            margin-bottom: 80px;
-            position: relative;
-            overflow: hidden;
-            padding: 20px;
-            border-radius: 10px;
-            background: linear-gradient(135deg, var(--white), var(--lightGrayishBlue));
-            animation: backgroundAnimation 10s infinite alternate;
-        }
-
-        @keyframes backgroundAnimation {
-            0% {
-                background-position: 0% 50%;
-            }
-            100% {
-                background-position: 100% 50%;
-            }
-        }
-
-        .content-text {
-            flex: 1; /* Take up remaining space */
-            max-width: 50%; /* Limit width to 50% */
-            background: var(--white);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeIn 1s ease-out forwards;
-            margin-left: 0; /* Ensure no gap on the left */
-            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover effect */
-        }
-
-        .content-text:hover {
-            transform: translateY(-5px); /* Lift on hover */
-            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .content img {
-            max-width: 30%; /* Ensure images fit perfectly */
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover effect */
-            cursor: pointer; /* Indicate clickable */
-        }
-
-        .content img:hover {
-            transform: scale(1.05); /* Enlarge on hover */
-            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
-        }
-
-        .content img:active {
-            transform: scale(1.1); /* Enlarge more on click */
-        }
-
-        .section-card {
-            margin-bottom: 80px;
-        }
-
-        .values-grid, .team-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px; /* Increased spacing between cards */
-            justify-content: center;
-            padding: 30px;
-            background: var(--white);
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        .value-card, .team-card {
-            background: var(--white);
-            padding: 20px; /* Increased padding */
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-            flex: 1;
-            min-width: 250px;
-            max-width: 300px; /* Limit card width */
-            text-align: center;
-        }
-
-        .value-card:hover {
-            transform: translateY(-5px);
-            background: linear-gradient(to right, var(--lightGold), var(--darkGold));
-            color: var(--white);
-        }
-
-        .team-card img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin-bottom: 10px;
-        }
-
-        @media (max-width: 1024px) {
-            .about-container {
-                max-width: 90%; /* Adjusted for smaller screens */
-            }
-            .content {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-            .content-text {
-                max-width: 100%; /* Full width on smaller screens */
-                margin-left: 0; /* Reset margin for smaller screens */
-            }
-            .content img {
-                max-width: 80%; /* Adjust image size for smaller screens */
-                margin: 20px auto;
-            }
-            h1 {
-                font-size: 36px;
-            }
-            .values-grid, .team-grid {
-                flex-direction: column;
-                align-items: center;
-            }
-            .value-card, .team-card {
-                width: 90%;
-                max-width: 350px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .content {
-                flex-direction: column;
-                text-align: center;
-            }
-            .content-text {
-                max-width: 100%;
-                margin-left: 0;
-                padding: 0 20px;
-            }
-            .content img {
-                max-width: 80%;
-                margin: 20px auto;
-            }
-            h1 {
-                font-size: 36px;
-            }
-        }
-    </style>
 </head>
+
 <body>
-    <div class="about-container">
-        <h1>About Us</h1> 
-        <div class="content">
-            <div class="content-text">
-                <p>When grief touches your life, the weight of decisions and arrangements can feel overwhelming. At <strong style="color: var(--lightGold);">The Whitehorse Funeral Services</strong>, we lift that burden with compassionate care and unwavering support.</p>
-                <p>Our dedicated team provides personalized funeral services that honor the wishes of the deceased and bring comfort to those left behind.</p>
-            </div>
-            <img src="assets/images/DSC_1042(1).jpg" alt="Compassionate Service Image">
-        </div>
-        
-        <div class="content">
-            <div class="content-text">
-                <h2>Our Mission</h2> <!-- Added Mission Heading -->
-                <p>At Whitehorse Funeral Services, our mission is to provide compassionate, dignified, and personalized funeral services that honor the lives of loved ones and support grieving families through difficult times.</p>
-                <p>We are committed to upholding the highest standards of professionalism, integrity, and respect, ensuring that every family we serve feels supported and cared for during their time of need.</p>
-            </div>
-            <img src="assets/images/DSC_1042(3).jpg" alt="Compassionate Service Image">
+    <!-- header -->
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="./assets/images/whitehorse-logo.png" alt="logo-img" class="logo-img"></a>
         </div>
 
-        <div class="section-card">
-            <h2>Our Core Values</h2>
-            <div class="values-grid">
-                <div class="value-card" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-out"><h3>💛 Compassion</h3><p>We treat every family with kindness, understanding, and care.</p></div>
-                <div class="value-card" data-aos="fade-up"><h3>🕊️ Respect</h3><p>We honor all beliefs, traditions, and final wishes with dignity.</p></div>
-                <div class="value-card" data-aos="fade-up"><h3>⚖️ Integrity</h3><p>We are transparent, honest, and uphold the highest ethical standards.</p></div>
-                <div class="value-card" data-aos="fade-up"><h3>📜 Professionalism</h3><p>Our trained staff provides seamless, respectful, and expert service.</p></div>
-                <div class="value-card" data-aos="fade-up"><h3>🎗️ Personalization</h3><p>Each service is tailored to celebrate the unique life of the departed.</p></div>
-            </div>
+        <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <button class="request-btn">Plan Funeral</button>
+
+        <button class="dropdown-toggle"><img src="./assets/icons/icon-hamburger.svg" alt="icon-hamburger"></button>
+    </header>
+
+    <!-- Popup Form Container -->
+    <div class="popup-form-container">
+
+        <div class="popup-form">
+
+            <span class="close-btn">&times;</span>
+            <h2>Request Invite</h2>
+
+            <form id="invite-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <button type="submit" class="request-btn">Submit</button>
+            </form>
+
         </div>
 
-        <div class="section-card">
-            <h2>Meet Our Team</h2>
-            <div class="team-grid">
-                <div class="team-card" data-aos="fade-up">
-                    <img src="assets/images/DSC_1049.jpg" alt="John Doe">
-                    <h3>John Doe</h3>
-                    <p>Founder & Director</p>
-                </div>
-                <div class="team-card" data-aos="fade-up">
-                    <img src="assets/images/DSC_1050.jpg" alt="Jane Smith">
-                    <h3>Jane Smith</h3>
-                    <p>Funeral Coordinator</p>
-                </div>
-                <div class="team-card" data-aos="fade-up">
-                    <img src="assets/images/DSC_1050.jpg" alt="Michael Brown">
-                    <h3>Michael Brown</h3>
-                    <p>Grief Counselor</p>
-                </div>
-            </div>
-        </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+    <!-- PAGE  -->
+    <section class="page-header">
+        <h1>About.</h1>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about">
+        <div class="about-container">
+            <div class="section-header">
+                <h2 class="section-title">About Us</h2>
+                <p class="section-subtitle">About The Whitehorse Funeral Services</p>
+            </div>
+            <div class="about-body">
+                <div class="about-img">
+                    <img src="./assets/images/abt-about.jpg" alt="abt-img">
+                </div>
+                <div class="about-content">
+                    <p>When grief touches your life, the weight of decisions and arrangements can feel overwhelming. At
+                        The
+                        Whitehorse Funeral Services, we lift that burden with compassionate care and unwavering support.
+                        We're a
+                        team of dedicated professionals who are passionate about providing personalized funeral services
+                        that
+                        honor the wishes of the deceased and comfort those left behind.
+                    </p>
+                    <p>We understand that every family is
+                        unique, and we take the time to listen, understand your needs, and create a service that truly
+                        reflects
+                        the life and spirit of your loved one. From the smallest detail to the most significant
+                        arrangement,
+                        we're here to guide you every step of the way, ensuring that your experience is as seamless and
+                        stress-free as possible. Our commitment is to provide a safe and supportive space for you to
+                        grieve,
+                        heal, and celebrate the life of your loved one.
+                    </p>
+
+                    <button class="request-btn">Contact Us</button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission">
+        <div class="mission-container">
+            <div class="section-header">
+                <h2 class="section-title">Our Mission</h2>
+                <!-- <p class="section-subtitle">About The Whitehorse Funeral Services</p> -->
+            </div>
+
+            <div class="mission-body">
+                <div class="mission-content">
+                    <p>At Whitehorse Funeral Services, our mission is to provide compassionate, dignified, and
+                        personalized
+                        funeral services that honor the lives of loved ones and support grieving families through
+                        difficult
+                        times.
+                    </p>
+                    <p>
+                        Compassion, Respect, Integrity, Professionalism, Personalization and community are our core
+                        values. Our vision is to be the leading provider of funeral services in Nairobi and Beyond,
+                        recognized for excellence in service, integrity, and community support.
+                    </p>
+                    <p>We are committed to upholding the highest standards of professionalism, integrity, and
+                        respect,
+                        ensuring that every family we serve feels supported and cared for during their time of need.
+                    </p>
+                </div>
+
+                <div class="mission-img">
+                    <img src="assets/images/mission.jpg" alt="Compassionate Service Image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="our-values" data-aos="slide-left">
+        <div class="about-container">
+            <h2>Our Core Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <img src="./images/circuit.png" alt="Innovation Icon">
+                    <h3>Innovation</h3>
+                    <p>
+                        We constantly strive to bring new ideas and cutting-edge technology to ensure your banking
+                        experience is seamless and intuitive.
+                    </p>
+                </div>
+                <div class="value-card">
+                    <img src="./images/cost.png" alt="Transparency Icon">
+                    <h3>Transparency</h3>
+                    <p>
+                        We believe in open communication. You'll always know where your money is, with clear statements
+                        and zero hidden fees.
+                    </p>
+                </div>
+                <div class="value-card">
+                    <img src="./images/credit-card.png" alt="Security Icon">
+                    <h3>Security</h3>
+                    <p>
+                        Your security is our top priority. We use the latest encryption and multi-factor authentication
+                        to protect your financial data.
+                    </p>
+                </div>
+                <div class="value-card">
+                    <img src="./images/customer-service.png" alt="Customer Service Icon">
+                    <h3>Customer Service</h3>
+                    <p>
+                        Our support team is here for you 24/7. We pride ourselves on providing quick, reliable help
+                        whenever you need it.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <footer>
+        <div class="container">
+
+            <div class="ft-one">
+
+                <div class="social-link">
+
+                    <img src="./assets/images/whitehorse-logo.png" alt="logo-img" class="logo-img">
+
+                    <ul class="social-link-list">
+                        <li><a href="#facebook"><img class="socials-icons" src="./assets/icons/icon-facebook.svg"
+                                    alt="icon-facebook"></a>
+                        </li>
+                        <li><a href="#youtube"><img class="socials-icons" src="./assets/icons/icon-youtube.svg"
+                                    alt="icon-youtube"></a>
+                        </li>
+                        <li><a href="#twitter"><img class="socials-icons" src="./assets/icons/icon-twitter.svg"
+                                    alt="icon-twitter"></a>
+                        </li>
+                        <li><a href="#instagram"><img class="socials-icons" src="./assets/icons/icon-instagram.svg"
+                                    alt="icon-instagram"></a></li>
+                    </ul>
+                </div>
+
+                <ul class="ft-nav-1">
+                    <li> <a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+                <ul class="ft-nav-2">
+                    <li><a href="#support">Support</a></li>
+                    <li><a href="#privacy-policy">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="ft-two">
+                <button class="request-btn">Plan a Funeral</button>
+                <h5>© Easybank. All Rights Reserved</h5>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>

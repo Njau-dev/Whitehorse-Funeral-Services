@@ -261,6 +261,34 @@ header .logo .logo-img {
     cursor: pointer;
 }
 
+/* PAGE-HEAD */
+/* .page-header {} */
+
+.page-header h1 {
+    padding: 3rem 0 2rem 0;
+    color: var(--lightGold);
+    font-family: serif;
+}
+
+.page-header {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.page-header::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 8px;
+    border-radius: 8px;
+    background: linear-gradient(to right, #ca8400, #fada00);
+}
+
 /* INDEX.HTML STYLING */
 
 /* bANNER sECTION   */
@@ -541,10 +569,6 @@ header .logo .logo-img {
     padding: 0 20px;
 }
 
-.section-header {
-    text-align: center;
-    margin-bottom: 50px;
-}
 
 .section-title {
     color: var(--darkBrown);
@@ -562,7 +586,7 @@ header .logo .logo-img {
     transform: translateX(-50%);
     width: 60px;
     height: 4px;
-    background-color: var(--lightGold);
+    background: linear-gradient(to right, #ca8400, #fada00);
 }
 
 .section-subtitle {
@@ -717,6 +741,62 @@ header .logo .logo-img {
     border-radius: 5px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ABOUT PAGE */
+
+.mission {
+    padding: 3rem 0;
+    background-color: var(--white);
+}
+
+.mission-container {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.mission-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+}
+
+.mission-container .mission-body .mission-content p {
+    color: var(--textPDark);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.mission-container .mission-img {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.mission-container .mission-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
 
 /* FOOTER SECTION */
 
@@ -979,7 +1059,9 @@ footer .container {
         border-radius: 0.5rem;
     }
 
-
+    .section-title {
+        margin-bottom: 1.8rem;
+    }
 
     /* SERVICES SECTION */
 
@@ -1018,6 +1100,19 @@ footer .container {
     .slider-controls {
         flex-direction: column;
         gap: 20px;
+    }
+
+
+
+    /* ABOUT US PAGE */
+    .mission-body {
+        flex-direction: column;
+        padding: 0 2rem;
+        gap: 2rem;
+    }
+
+    .mission-container {
+        padding: 1rem 0;
     }
 }
 
